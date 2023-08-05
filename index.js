@@ -51,5 +51,5 @@ mongoose.connection.on('disconnected',()=>console.log('disconnected'))
 
 app.listen(process.env.port, ()=>{
     console.log('listening on port'+process.env.port)
-    main().then(()=> console.log('connected to db').catch(err => console.log(err));
+    main().then(()=> console.log('connected to db')).catch(err => console.log(err));
 })
