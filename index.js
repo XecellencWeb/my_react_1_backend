@@ -48,8 +48,8 @@ async function main() {
 }
 
 mongoose.connection.on('disconnected',()=>console.log('disconnected'))
-mongoose.connection.on('connected',()=>console.log('connected to db'))
 
 app.listen(process.env.port, ()=>{
-    main().catch(err => console.log(err));
+    console.log('listening on port'+process.env.port)
+    main().then(()=> console.log('connected to db').catch(err => console.log(err));
 })
